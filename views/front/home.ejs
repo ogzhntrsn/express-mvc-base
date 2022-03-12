@@ -8,9 +8,15 @@
 </head>
 <body>
 
-    <% users.forEach(user => { %>
-        <%= user.name %>
-    <% }); %>
+    <form action="" method="post">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input type="text" name="name" placeholder="İsminiz">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Şifreniz">
+        <button type="submit">Gönder</button>
+    </form>
+
+
 
 </body>
 </html>
